@@ -1,8 +1,8 @@
 {
-  "name": "uoc-boilerplate",
+  "name": "uoc-hcss-2-pec1",
   "version": "3.14.0",
   "private": true,
-  "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "description": "Blink Case Study — Motion design, visual identity, desktop web & app UI design.",
   "scripts": {
     "parcel:serve": "parcel -p 8123 --target web",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
@@ -23,17 +23,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
+    "url": "git+https://github.com/lcaballerogar/uoc-hcss-2-pec1.git"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Laura Caballero García",
+    "email": "lcaballerogar@uoc.edu"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
+    "url": "https://github.com/lcaballerogar/uoc-hcss-2-pec1/issues"
   },
-  "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
+  "homepage": "https://github.com/lcaballerogar/uoc-hcss-2-pec1#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
     "autoprefixer": "^10.5.5",
