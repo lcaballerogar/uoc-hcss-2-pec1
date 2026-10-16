@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  #RESET
+\*------------------------------------*/
+
+/**
+ * Box model and spacing reset.
+ *
+ * 1. Include padding and border in the element's total width and height.
+ * 2. Remove browser default margins and paddings. Spacing is defined
+ *    explicitly in the elements and components layers.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* [1] */
+  padding: 0; /* [2] */
+  margin: 0; /* [2] */
+}
+
+/**
+ * Prevent mobile browsers from enlarging text automatically when the
+ * device is rotated to landscape.
+ */
+html {
+  text-size-adjust: 100%;
+}
