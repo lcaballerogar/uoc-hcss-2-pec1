@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/lcaballerogar/uoc-hcss-2-pec1/issues"
   },
-  "homepage": "https://github.com/lcaballerogar/uoc-hcss-2-pec1#readme",
+  "homepage": "https://uoc-hcss-2-pec1.netlify.app/",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
     "autoprefixer": "^10.5.5",
