@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  #FONT-FACE
+\*------------------------------------*/
+
+/**
+ * Self-hosted variable fonts.
+ *
+ * Font paths are relative to main.scss, not to this partial: Sass merges
+ * all partials into main.scss before Parcel resolves url() references.
+ *
+ * 1. Variable font: a single file covers every weight from 100 to 900.
+ * 2. Show the fallback font while the web font loads, then swap.
+ */
+ 
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900; /* [1] */
+  src: url("../fonts/geist/Geist-VariableFont_wght.woff2") format("woff2");
+  font-display: swap; /* [2] */
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 100 900; /* [1] */
+  src: url("../fonts/geist-mono/GeistMono-VariableFont_wght.woff2") format("woff2");
+  font-display: swap; /* [2] */
+}

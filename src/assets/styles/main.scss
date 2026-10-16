@@ -15,7 +15,7 @@
  * CONTENTS
  *
  * SETTINGS
- * (none yet)
+ * Variables............Design tokens as Sass variables.
  *
  * TOOLS
  * (none yet)
@@ -24,6 +24,7 @@
  * Dependencies.........Third-party styles from npm packages.
  *
  * GENERIC
+ * Font-face............Self-hosted Geist and Geist Mono variable fonts.
  * Reset................Box-sizing, margins and text size adjustment.
  *
  * ELEMENTS
@@ -44,7 +45,7 @@
   #SETTINGS
 \*------------------------------------*/
 
-@use "settings/tokens";
+@use "settings/variables";
 
 
 /*------------------------------------*\
@@ -63,6 +64,7 @@
   #GENERIC
 \*------------------------------------*/
 
+@use "generic/font-face"; 
 @use "generic/reset";
 
 
