@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+/**
+ * Design tokens as Sass variables. They output no CSS.
+ *
+ * Two levels:
+ * - Primitives: raw values with no interface role.
+ * - Semantics: what a value is for. They always reference a primitive.
+ *
+ */
+
+/*------------------------------------*\
+  #PRIMITIVES
+\*------------------------------------*/
+
+// Primitives: color
+$color-neutral-0: #fff;
+$color-neutral-600: #737373;
+$color-neutral-700: #535353;
+$color-neutral-950: #121212;
+
+// Primitives: typography
+$font-family-sans: "Geist", system-ui, sans-serif;
+$font-family-mono: "Geist Mono", monospace;
+
+
+/*------------------------------------*\
+  #SEMANTICS
+\*------------------------------------*/
+
+// Color: background
+$color-background-primary: $color-neutral-0;
+
+// Color: text
+$color-text-primary: $color-neutral-950;
+$color-text-secondary: $color-neutral-700;
+$color-text-tertiary: $color-neutral-600;
+
+
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+
+// Mobile first: styles inside each media query apply from that width up.
+$breakpoint-md: 768px;
