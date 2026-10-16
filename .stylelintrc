@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss", 
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "selector-max-id": [
+      0,
+      {
+        "message": "Avoid ID selectors. Use a BEM class instead."
+      }
+    ],
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Use BEM naming: block__element--modifier."
+      }
+    ], 
+    "selector-max-specificity": [
+      "0,2,0",
+      { "message": "Keep specificity low: use a single BEM class instead of combining selectors." }
+    ],
+    "max-nesting-depth": [
+      2,
+      {
+        "ignoreAtRules": ["media"],
+        "message": "Avoid nesting deeper than 2 levels. Use a BEM element or modifier instead."
+      }
+    ],
+    "declaration-no-important": [
+      true,
+      { "message": "Avoid !important. Use it only in the utilities layer." }
+    ]
+  }
+}
