@@ -32,5 +32,16 @@
       true,
       { "message": "Avoid !important. Use it only in the utilities layer." }
     ]
-  }
+  }, 
+  "overrides": [
+    {
+      "files": ["src/assets/styles/elements/**/*.scss"],
+      "rules": {
+        "selector-max-class": [
+          0,
+          { "message": "The elements layer only styles bare HTML elements. Move class selectors to objects or components." }
+        ]
+      }
+    }
+  ]
 }

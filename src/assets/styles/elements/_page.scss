@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  #PAGE
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Base font size. Every rem-based value in the project scales with it.
+ *
+ * 1. 87.5% = 14px on mobile with the default browser font size.
+ *    Percentages respect the user's font size preference.
+ * 2. 100% = 16px from tablet up.
+ */
+html {
+  font-size: 87.5%; /* [1] */
+
+  @media (min-width: variables.$breakpoint-md) {
+    font-size: 100%; /* [2] */
+  }
+}
+
+/**
+ * Base typography and colors for the whole page.
+ */
+
+ body {
+  font-family: variables.$font-family-sans;
+  color: variables.$color-text-primary;
+  background-color: variables.$color-background-primary;
+}
