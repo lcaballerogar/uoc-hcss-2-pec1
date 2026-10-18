@@ -21,9 +21,23 @@ $color-neutral-600: #737373;
 $color-neutral-700: #535353;
 $color-neutral-950: #121212;
 
+
 // Primitives: typography
 $font-family-sans: "Geist", system-ui, sans-serif;
 $font-family-mono: "Geist Mono", monospace;
+
+$font-size-m: 1.125rem;   // 18px
+$font-size-2xl: 2rem;     // 32px
+$font-size-3xl: 3.5rem;   // 56px
+
+$font-weight-regular: 400;
+
+$line-height-tight: 1.2;
+$line-height-text: 1.6;
+
+// Spacing: n × 4px
+$spacing-2xs: 0.5rem;    // 8px
+$spacing-m: 1.25rem;   // 20px
 
 
 /*------------------------------------*\
@@ -33,10 +47,15 @@ $font-family-mono: "Geist Mono", monospace;
 // Color: background
 $color-background-primary: $color-neutral-0;
 
+
 // Color: text
 $color-text-primary: $color-neutral-950;
 $color-text-secondary: $color-neutral-700;
 $color-text-tertiary: $color-neutral-600;
+
+// Spacing
+$spacing-heading: $spacing-2xs;
+$spacing-paragraph: $spacing-m;
 
 
 /*------------------------------------*\

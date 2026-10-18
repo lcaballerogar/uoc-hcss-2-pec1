@@ -28,7 +28,7 @@
  * Reset................Box-sizing, margins and text size adjustment.
  *
  * ELEMENTS
- * (none yet)
+ * Headings.............h1 and h2 sizes, weight and spacing.
  *
  * OBJECTS
  * (none yet)
@@ -73,6 +73,7 @@
 \*------------------------------------*/
 
 @use "elements/page";
+@use "elements/headings";
 
 
 /*------------------------------------*\

@@ -1,0 +1,24 @@
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Shared heading styles. Single-direction margins (CSS Guidelines):
+ * each heading only pushes the content below it.
+ */
+h1,
+h2 {
+  margin-bottom: variables.$spacing-heading;
+  font-weight: variables.$font-weight-regular;
+  line-height: variables.$line-height-tight;
+}
+
+h1 {
+  font-size: variables.$font-size-3xl;
+}
+
+h2 {
+  font-size: variables.$font-size-2xl;
+}
