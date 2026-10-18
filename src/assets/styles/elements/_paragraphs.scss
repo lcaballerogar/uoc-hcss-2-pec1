@@ -1,0 +1,16 @@
+/*------------------------------------*\
+  #PARAGRAPHS
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Reading text. Size and color are part of the base: every paragraph
+ * on the page shares the case study reading style.
+ */
+p {
+  margin-bottom: variables.$spacing-paragraph;
+  font-size: variables.$font-size-m;
+  line-height: variables.$line-height-text;
+  color: variables.$color-text-tertiary;
+}
