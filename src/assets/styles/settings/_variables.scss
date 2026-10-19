@@ -22,6 +22,11 @@ $color-neutral-700: #535353;
 $color-neutral-950: #121212;
 
 
+$color-blue-400: #2A35FF; 
+$color-blue-600: #0007DB; 
+$color-blue-800: #01037A;
+
+
 // Primitives: typography
 $font-family-sans: "Geist", system-ui, sans-serif;
 $font-family-mono: "Geist Mono", monospace;
@@ -52,6 +57,16 @@ $color-background-primary: $color-neutral-0;
 $color-text-primary: $color-neutral-950;
 $color-text-secondary: $color-neutral-700;
 $color-text-tertiary: $color-neutral-600;
+
+$color-link: $color-blue-600;
+$color-link-hover: $color-blue-400;
+$color-link-visited: $color-blue-800;
+
+
+$color-focus: $color-blue-400;
+
+
+
 
 // Spacing
 $spacing-heading: $spacing-2xs;

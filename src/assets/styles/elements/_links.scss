@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * States follow the LVHFA order so :hover overrides :visited.
+ * :visited only accepts colour properties (browser privacy).
+ */
+a {
+  color: variables.$color-link;
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.2em;
+
+  &:visited {
+    color: variables.$color-link-visited;
+  }
+
+  &:hover {
+    color: variables.$color-link-hover;
+  }
+}
+
+/**
+ * Visible keyboard focus (WCAG 2.4.7). The outline must reach
+ * a 3:1 contrast with adjacent colours (WCAG 1.4.11).
+ */
+:focus-visible {
+  outline: 2px solid variables.$color-focus;
+  outline-offset: 3px;
+}
