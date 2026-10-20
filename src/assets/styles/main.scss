@@ -43,6 +43,7 @@
  * Case-index...........Section index with current-section marker.
  * Case-overview........Opening summary of the case study.
  * Case-meta............Project metadata grid.
+ * Case-section.........Eyebrow, title and text of each section.
  *
  * UTILITIES
  * Visually-hidden......Hides content visually, keeps it for screen readers. 
@@ -102,6 +103,7 @@
 @use "components/case-index"; 
 @use "components/case-overview"; 
 @use "components/case-meta"; 
+@use "components/case-section"; 
 
 
 

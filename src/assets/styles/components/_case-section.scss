@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  #CASE-SECTION
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Each section of the case study: eyebrow, title and body text.
+ * Body paragraphs have no class: they use the base `p` styles.
+ *
+ * 1. Leaves some room above the section when the index links to it.
+ * 2. The closing section needs no space after it: the layout
+ *    padding already ends the page.
+ * 3. The title keeps its base margin; it collapses into this one,
+ *    so the gap before the text is 24px.
+ */
+
+.case-section {
+  margin-bottom: variables.$spacing-4xl;
+  scroll-margin-top: variables.$spacing-scroll-margin; /* [1] */
+
+  &:last-child {
+    margin-bottom: 0; /* [2] */
+  }
+
+  &__header {
+    margin-bottom: variables.$spacing-l; /* [3] */
+  }
+
+  &__eyebrow {
+    margin-bottom: variables.$spacing-2xs;
+    font-family: variables.$font-family-mono;
+    font-size: variables.$font-size-xs;
+    color: variables.$color-text-tertiary;
+    text-transform: uppercase;
+  }
+}
