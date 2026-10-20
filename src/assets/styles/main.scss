@@ -40,6 +40,7 @@
  * Case.................Case study layout: sticky hero, sidebar and content grid.
  * Skip-link............Keyboard shortcut to the main content.
  * Case-header..........Case study title, claim and tags.
+ * Case-index...........Section index with current-section marker.
  *
  * UTILITIES
  * (none yet)
@@ -96,6 +97,7 @@
 @use "components/case";
 @use "components/skip-link"; 
 @use "components/case-header";
+@use "components/case-index"; 
 
 
 

@@ -1,0 +1,60 @@
+/*------------------------------------*\
+  #CASE-INDEX
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Index of the case study sections.
+ *
+ * 1. Removes the markers but keeps the list semantics in Safari.
+ * 2. Overrides the base link states (`a:visited`, `a:hover`),
+ *    whose specificity (0,1,1) beats a single class.
+ * 3. Dot that marks the current section. It reads its colour from a
+ *    local custom property, so the pseudo-element never needs a state
+ *    selector (`[aria-current]::before` would be 0,2,1).
+ * 4. Set by JavaScript on the link of the section being read.
+ */
+
+.case-index {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-xs;
+    list-style-type: ""; /* [1] */
+  }
+
+  &__link {
+    display: flex;
+    gap: variables.$spacing-2xs;
+    align-items: center;
+    font-size: variables.$font-size-s;
+    color: variables.$color-text-tertiary;
+    text-decoration: none;
+
+    &::before {
+      flex-shrink: 0;
+      width: 0.375rem;  // 6px
+      height: 0.375rem;
+      content: "";
+      background-color: var(--case-index-marker, transparent); /* [3] */
+      border-radius: 50%;
+    }
+
+    &:visited {
+      color: variables.$color-text-tertiary; /* [2] */
+    }
+
+    &:hover {
+      font-weight: variables.$font-weight-medium;
+      color: variables.$color-text-primary; /* [2] */
+    }
+
+    &[aria-current="true"] { /* [4] */
+      --case-index-marker: currentcolor; /* [3] */
+
+      font-weight: variables.$font-weight-medium;
+      color: variables.$color-text-primary;
+    }
+  }
+}
