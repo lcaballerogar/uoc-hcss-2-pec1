@@ -9,6 +9,7 @@
  * on the page shares the case study reading style.
  */
 p {
+  max-width: variables.$measure-paragraph;
   margin-bottom: variables.$spacing-paragraph;
   font-size: variables.$font-size-m;
   line-height: variables.$line-height-text;

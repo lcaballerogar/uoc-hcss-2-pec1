@@ -8,7 +8,6 @@
  * Two levels:
  * - Primitives: raw values with no interface role.
  * - Semantics: what a value is for. They always reference a primitive.
- *
  */
 
 /*------------------------------------*\
@@ -23,11 +22,9 @@ $color-neutral-600: #737373;
 $color-neutral-700: #535353;
 $color-neutral-950: #121212;
 
-
-$color-blue-400: #2A35FF; 
-$color-blue-600: #0007DB; 
-$color-blue-800: #01037A;
-
+$color-blue-400: #2a35ff;
+$color-blue-600: #0007db;
+$color-blue-800: #01037a;
 
 // Primitives: typography
 $font-family-sans: "Geist", system-ui, sans-serif;
@@ -36,8 +33,8 @@ $font-family-mono: "Geist Mono", monospace;
 $font-size-xs: 0.875rem;  // 14px
 $font-size-s: 1rem;       // 16px
 $font-size-m: 1.125rem;   // 18px
-$font-size-2xl: 2rem;     // 32px
 $font-size-xl: 1.5rem;    // 24px
+$font-size-2xl: 2rem;     // 32px
 $font-size-3xl: 3.5rem;   // 56px
 
 $font-weight-regular: 400;
@@ -47,10 +44,8 @@ $line-height-tight: 1.2;
 $line-height-snug: 1.4;
 $line-height-text: 1.6;
 
-
-// Primitives: size
-$size-text-measure: 60ch; // comfortable line length
-$size-content-max: 90rem; // 1440px, gutters excluded
+$measure-text: 60ch;
+$measure-paragraph: 68ch;
 
 // Primitives: spacing: n × 4px
 $spacing-3xs: 0.25rem;    // 4px
@@ -62,13 +57,13 @@ $spacing-l: 1.5rem;       // 24px
 $spacing-xl: 2rem;        // 32px
 $spacing-2xl: 3rem;       // 48px
 $spacing-3xl: 4rem;       // 64px
+$spacing-4xl: 6rem;       // 96px
 
 // Primitives: radius
 $radius-s: 0.5rem;        // 8px
 
-
-
-
+// Primitives: size
+$size-content-max: 90rem;
 
 /*------------------------------------*\
   #SEMANTICS
@@ -76,7 +71,6 @@ $radius-s: 0.5rem;        // 8px
 
 // Color: background
 $color-background-primary: $color-neutral-0;
-
 
 // Color: text
 $color-text-primary: $color-neutral-950;
@@ -87,9 +81,7 @@ $color-link: $color-blue-600;
 $color-link-hover: $color-blue-400;
 $color-link-visited: $color-blue-800;
 
-
 $color-focus: $color-blue-400;
-
 
 // Color: tag
 $color-tag-background-default: $color-neutral-100;
@@ -98,7 +90,6 @@ $color-tag-background-active: $color-neutral-950;
 
 $color-tag-text-default: $color-neutral-950;
 $color-tag-text-active: $color-neutral-0;
-
 
 // Spacing
 $spacing-container-inline: $spacing-l;
@@ -112,9 +103,6 @@ $spacing-scroll-margin: $spacing-xl;
 // Radius
 $radius-tag: $radius-s;
 
-
-
-
 /*------------------------------------*\
   #Z-INDEX
 \*------------------------------------*/
@@ -126,7 +114,6 @@ $z-layers: (
   "back-to-top": 10,
   "skip-link": 100,
 );
-
 
 /*------------------------------------*\
   #BREAKPOINTS

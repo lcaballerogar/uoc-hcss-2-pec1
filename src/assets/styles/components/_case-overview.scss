@@ -17,7 +17,7 @@
   scroll-margin-top: variables.$spacing-scroll-margin; /* [1] */
 
   &__summary {
-    max-width: variables.$size-text-measure; /* [2] */
+    max-width: variables.$measure-text; /* [2] */
     margin-bottom: variables.$spacing-2xl;
     font-size: variables.$font-size-xl;
     line-height: variables.$line-height-snug;
