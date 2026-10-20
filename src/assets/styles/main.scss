@@ -18,7 +18,7 @@
  * Variables............Design tokens as Sass variables.
  *
  * TOOLS
- * (none yet)
+ * Functions............Custom Sass functions: z().
  *
  * DEPENDENCIES
  * Dependencies.........Third-party styles from npm packages.
@@ -54,6 +54,8 @@
 /*------------------------------------*\
   #TOOLS
 \*------------------------------------*/
+
+@use "tools/functions";
 
 
 /*------------------------------------*\

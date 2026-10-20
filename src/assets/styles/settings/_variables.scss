@@ -40,9 +40,18 @@ $font-weight-regular: 400;
 $line-height-tight: 1.2;
 $line-height-text: 1.6;
 
-// Spacing: n × 4px
-$spacing-2xs: 0.5rem;    // 8px
-$spacing-m: 1.25rem;   // 20px
+// Primitives: spacing: n × 4px
+$spacing-2xs: 0.5rem;     // 8px
+$spacing-s: 1rem;         // 16px
+$spacing-m: 1.25rem;      // 20px
+$spacing-l: 1.5rem;       // 24px
+$spacing-xl: 2rem;        // 32px
+$spacing-2xl: 3rem;       // 48px
+$spacing-3xl: 4rem;       // 64px
+
+
+// Primitives: size
+$size-content-max: 90rem; // 1440px, gutters excluded
 
 
 /*------------------------------------*\
@@ -66,11 +75,24 @@ $color-link-visited: $color-blue-800;
 $color-focus: $color-blue-400;
 
 
-
-
 // Spacing
+$spacing-container-inline: $spacing-l;
+$spacing-grid-column: $spacing-s;
+
 $spacing-heading: $spacing-2xs;
 $spacing-paragraph: $spacing-m;
+
+
+/*------------------------------------*\
+  #Z-INDEX
+\*------------------------------------*/
+
+// Stacking layers, from back to front. Read them with z() (tools).
+$z-layers: (
+  "hero": 0,
+  "content": 1,
+  "back-to-top": 10,
+);
 
 
 /*------------------------------------*\
@@ -79,3 +101,4 @@ $spacing-paragraph: $spacing-m;
 
 // Mobile first: styles inside each media query apply from that width up.
 $breakpoint-md: 768px;
+$breakpoint-lg: 1024px;

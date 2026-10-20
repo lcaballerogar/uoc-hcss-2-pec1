@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  #FUNCTIONS
+\*------------------------------------*/
+
+@use "sass:map";
+@use "../settings/variables";
+
+/**
+ * Returns the z-index of a named stacking layer.
+ *
+ * Layers live in `$z-layers` (settings), so every z-index in the
+ * project comes from one ordered list instead of arbitrary numbers.
+ *
+ * Usage: z-index: z("content");
+ */
+@function z($layer) {
+  @if not map.has-key(variables.$z-layers, $layer) {
+    @error "Unknown z-index layer `#{$layer}`. Available layers: #{map.keys(variables.$z-layers)}.";
+  }
+
+  @return map.get(variables.$z-layers, $layer);
+}
