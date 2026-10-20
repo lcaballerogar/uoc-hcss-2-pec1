@@ -17,6 +17,8 @@
 
 // Primitives: color
 $color-neutral-0: #fff;
+$color-neutral-100: #ebebeb;
+$color-neutral-200: #dedede;
 $color-neutral-600: #737373;
 $color-neutral-700: #535353;
 $color-neutral-950: #121212;
@@ -81,12 +83,25 @@ $color-link-visited: $color-blue-800;
 $color-focus: $color-blue-400;
 
 
+// Color: tag
+$color-tag-background-default: $color-neutral-100;
+$color-tag-background-hover: $color-neutral-200;
+$color-tag-background-active: $color-neutral-950;
+
+$color-tag-text-default: $color-neutral-950;
+$color-tag-text-active: $color-neutral-0;
+
+
 // Spacing
 $spacing-container-inline: $spacing-l;
 $spacing-grid-column: $spacing-s;
 
 $spacing-heading: $spacing-2xs;
 $spacing-paragraph: $spacing-m;
+
+// Radius
+$radius-tag: $radius-s;
+
 
 
 /*------------------------------------*\

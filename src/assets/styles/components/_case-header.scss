@@ -1,0 +1,49 @@
+/*------------------------------------*\
+  #CASE-HEADER
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Introduction of the case study: title, claim and tags.
+ *
+ * 1. Margins in one direction only (CSS Guidelines).
+ * 2. Removes the markers but keeps the list semantics in Safari,
+ *    which drops them with `list-style: none`.
+ * 3. Tags link to the portfolio archive filtered by that category.
+ *    They look like chips, so they drop the base link underline.
+ * 4. Overrides the base link states (`a:visited`, `a:hover`), whose
+ *    specificity (0,1,1) beats a single class.
+ */
+
+.case-header {
+  &__client {
+    margin-bottom: variables.$spacing-l; /* [1] */
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-2xs;
+    margin-bottom: variables.$spacing-2xl; /* [1] */
+    list-style-type: ""; /* [2] */
+  }
+
+  &__tag-link {
+    display: inline-block;
+    padding: variables.$spacing-2xs variables.$spacing-xs;
+    color: variables.$color-tag-text-default;
+    text-decoration: none; /* [3] */
+    background-color: variables.$color-tag-background-default;
+    border-radius: variables.$radius-tag;
+
+    &:visited {
+      color: variables.$color-tag-text-default; /* [4] */
+    }
+
+    &:hover {
+      color: variables.$color-tag-text-default; /* [4] */
+      background-color: variables.$color-tag-background-hover;
+    }
+  }
+}
