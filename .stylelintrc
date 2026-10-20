@@ -52,6 +52,12 @@
       "rules": {
         "selector-max-type": [0, { "message": "Avoid element selectors. Use a BEM class instead." }]
       }
+    }, 
+    {
+      "files": ["src/assets/styles/utilities/**/*.scss"],
+      "rules": {
+        "declaration-no-important": null
+      }
     }
   ]
 }

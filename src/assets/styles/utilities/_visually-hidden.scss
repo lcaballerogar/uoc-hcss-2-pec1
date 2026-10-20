@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  #VISUALLY-HIDDEN
+\*------------------------------------*/
+
+/**
+ * Hides content visually but keeps it available to screen readers.
+ *
+ * Not `display: none` or `visibility: hidden`: both also remove the
+ * content from the accessibility tree.
+ *
+ * `!important` makes the utility win over any component, whatever its
+ * specificity: a utility must always do exactly what its name says
+ * (ITCSS, CSS Guidelines).
+ */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  clip-path: inset(50%) !important;
+}

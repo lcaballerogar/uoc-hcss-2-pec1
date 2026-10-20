@@ -43,7 +43,7 @@
  * Case-index...........Section index with current-section marker.
  *
  * UTILITIES
- * (none yet)
+ * Visually-hidden......Hides content visually, keeps it for screen readers. 
  */
 
 
@@ -104,3 +104,5 @@
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
+
+@use "utilities/visually-hidden"; 
