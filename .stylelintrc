@@ -18,8 +18,9 @@
       }
     ], 
     "selector-max-specificity": [
-      "0,2,0",
-      { "message": "Keep specificity low: use a single BEM class instead of combining selectors." }
+      "0,2,0", { 
+        "ignoreSelectors": ["/^__/", "/^--/"],
+        "message": "Keep specificity low: use a single BEM class instead of combining selectors." }
     ],
     "max-nesting-depth": [
       2,
