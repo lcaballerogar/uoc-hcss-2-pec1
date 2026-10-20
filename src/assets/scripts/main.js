@@ -7,10 +7,13 @@
 // import SomeModule from 'some-node-module';
 
 /**
- * Write any other JavaScript below
+ * Import local modules
  */
 
-+(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-})();
+import { initCaseIndex } from './case-index.js';
+
+/**
+ * Initialise
+ */
+
+initCaseIndex();
