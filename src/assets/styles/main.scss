@@ -41,6 +41,7 @@
  * Skip-link............Keyboard shortcut to the main content.
  * Case-header..........Case study title, claim and tags.
  * Case-index...........Section index with current-section marker.
+ * Case-overview........Opening summary of the case study.
  *
  * UTILITIES
  * Visually-hidden......Hides content visually, keeps it for screen readers. 
@@ -98,6 +99,7 @@
 @use "components/skip-link"; 
 @use "components/case-header";
 @use "components/case-index"; 
+@use "components/case-overview"; 
 
 
 

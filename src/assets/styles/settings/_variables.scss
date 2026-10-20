@@ -36,15 +36,19 @@ $font-family-mono: "Geist Mono", monospace;
 $font-size-s: 1rem;       // 16px
 $font-size-m: 1.125rem;   // 18px
 $font-size-2xl: 2rem;     // 32px
+$font-size-xl: 1.5rem;    // 24px
 $font-size-3xl: 3.5rem;   // 56px
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 
 $line-height-tight: 1.2;
+$line-height-snug: 1.4;
 $line-height-text: 1.6;
 
+
 // Primitives: size
+$size-text-measure: 60ch; // comfortable line length
 $size-content-max: 90rem; // 1440px, gutters excluded
 
 // Primitives: spacing: n × 4px
@@ -101,8 +105,11 @@ $spacing-grid-column: $spacing-s;
 $spacing-heading: $spacing-2xs;
 $spacing-paragraph: $spacing-m;
 
+$spacing-scroll-margin: $spacing-xl;
+
 // Radius
 $radius-tag: $radius-s;
+
 
 
 
