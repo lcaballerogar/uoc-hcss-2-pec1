@@ -33,6 +33,7 @@ $color-blue-800: #01037A;
 $font-family-sans: "Geist", system-ui, sans-serif;
 $font-family-mono: "Geist Mono", monospace;
 
+$font-size-xs: 0.875rem;  // 14px
 $font-size-s: 1rem;       // 16px
 $font-size-m: 1.125rem;   // 18px
 $font-size-2xl: 2rem;     // 32px
@@ -52,6 +53,7 @@ $size-text-measure: 60ch; // comfortable line length
 $size-content-max: 90rem; // 1440px, gutters excluded
 
 // Primitives: spacing: n × 4px
+$spacing-3xs: 0.25rem;    // 4px
 $spacing-2xs: 0.5rem;     // 8px
 $spacing-xs: 0.75rem;     // 12px
 $spacing-s: 1rem;         // 16px
@@ -131,5 +133,6 @@ $z-layers: (
 \*------------------------------------*/
 
 // Mobile first: styles inside each media query apply from that width up.
+$breakpoint-sm: 480px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;

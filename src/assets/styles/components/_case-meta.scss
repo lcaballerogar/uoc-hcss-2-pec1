@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #CASE-META
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Project metadata: label and value pairs (timeline, roles, team…).
+ *
+ * 1. One column by default (mobile first); columns are added
+ *    from each breakpoint up.
+ * 2. Removes the markers but keeps the list semantics in Safari.
+ */
+
+.case-meta {
+  display: grid; /* [1] */
+  row-gap: variables.$spacing-l;
+  column-gap: variables.$spacing-grid-column;
+  margin-bottom: variables.$spacing-3xl;
+
+  @media (min-width: variables.$breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: variables.$breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__label {
+    margin-bottom: variables.$spacing-2xs;
+    font-family: variables.$font-family-mono;
+    font-size: variables.$font-size-xs;
+    color: variables.$color-text-tertiary;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    font-size: variables.$font-size-xs;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-3xs;
+    list-style-type: ""; /* [2] */
+  }
+}
