@@ -42,6 +42,15 @@
           { "message": "The elements layer only styles bare HTML elements. Move class selectors to objects or components." }
         ]
       }
+    }, 
+    {
+      "files": [
+        "src/assets/styles/objects/**/*.scss",
+        "src/assets/styles/components/**/*.scss"
+      ],
+      "rules": {
+        "selector-max-type": [0, { "message": "Avoid element selectors. Use a BEM class instead." }]
+      }
     }
   ]
 }

@@ -1,0 +1,68 @@
+/*------------------------------------*\
+  #CASE
+\*------------------------------------*/
+
+@use "../settings/variables";
+@use "../tools/functions";
+
+/**
+ * Case study page layout.
+ *
+ * 1. The hero stays fixed behind the content while scrolling.
+ * 2. Full-width background that covers the sticky hero.
+ * 3. Centres the grid on wide screens without limiting the background.
+ * 4. Columns 4 and 12 stay empty, as in the portfolio.
+ */
+
+.case {
+  &__hero {
+    position: sticky; /* [1] */
+    top: 0;
+    z-index: functions.z("hero");
+    display: block;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  &__hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__layout {
+    position: relative;
+    z-index: functions.z("content");
+    padding: variables.$spacing-3xl variables.$spacing-container-inline;
+    background-color: variables.$color-background-primary; /* [2] */
+
+    @media (min-width: variables.$breakpoint-lg) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: variables.$spacing-grid-column;
+      padding-inline: max(
+        variables.$spacing-container-inline,
+        calc((100% - variables.$size-content-max) / 2)
+      ); /* [3] */
+    }
+  }
+
+  &__aside {
+    margin-bottom: variables.$spacing-2xl;
+
+    @media (min-width: variables.$breakpoint-lg) {
+      position: sticky;
+      top: variables.$spacing-xl;
+      grid-column: 1 / span 3;
+      align-self: start;
+      margin-bottom: 0;
+    }
+  }
+
+  &__main {
+    @media (min-width: variables.$breakpoint-lg) {
+      grid-column: 5 / span 7; /* [4] */
+    }
+  }
+}
