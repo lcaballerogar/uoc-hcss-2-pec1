@@ -40,8 +40,12 @@ $font-weight-regular: 400;
 $line-height-tight: 1.2;
 $line-height-text: 1.6;
 
+// Primitives: size
+$size-content-max: 90rem; // 1440px, gutters excluded
+
 // Primitives: spacing: n × 4px
 $spacing-2xs: 0.5rem;     // 8px
+$spacing-xs: 0.75rem;     // 12px
 $spacing-s: 1rem;         // 16px
 $spacing-m: 1.25rem;      // 20px
 $spacing-l: 1.5rem;       // 24px
@@ -49,9 +53,11 @@ $spacing-xl: 2rem;        // 32px
 $spacing-2xl: 3rem;       // 48px
 $spacing-3xl: 4rem;       // 64px
 
+// Primitives: radius
+$radius-s: 0.5rem;        // 8px
 
-// Primitives: size
-$size-content-max: 90rem; // 1440px, gutters excluded
+
+
 
 
 /*------------------------------------*\
@@ -92,6 +98,7 @@ $z-layers: (
   "hero": 0,
   "content": 1,
   "back-to-top": 10,
+  "skip-link": 100,
 );
 
 

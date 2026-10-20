@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  #SKIP-LINK
+\*------------------------------------*/
+
+@use "../settings/variables";
+@use "../tools/functions";
+
+/**
+ * Lets keyboard users jump straight to the main content.
+ *
+ * 1. Moved off-screen instead of hidden, so it stays focusable
+ *    and announced by screen readers.
+ * 2. Slides into view when it receives focus.
+ */
+
+.skip-link {
+  position: fixed;
+  top: variables.$spacing-2xs;
+  left: variables.$spacing-container-inline;
+  z-index: functions.z("skip-link");
+  padding: variables.$spacing-2xs variables.$spacing-xs;
+  background-color: variables.$color-background-primary;
+  border-radius: variables.$radius-s;
+  transform: translateY(-200%); /* [1] */
+
+  &:focus {
+    transform: none; /* [2] */
+  }
+}

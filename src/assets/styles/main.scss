@@ -38,6 +38,7 @@
  *
  * COMPONENTS
  * Case.................Case study layout: sticky hero, sidebar and content grid.
+ * Skip-link............Keyboard shortcut to the main content.
  *
  * UTILITIES
  * (none yet)
@@ -92,6 +93,7 @@
   #COMPONENTS
 \*------------------------------------*/
 @use "components/case";
+@use "components/skip-link"
 
 
 /*------------------------------------*\
