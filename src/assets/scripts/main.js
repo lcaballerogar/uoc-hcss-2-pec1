@@ -11,9 +11,12 @@
  */
 
 import { initCaseIndex } from './case-index.js';
+import { initBackToTop } from './back-to-top.js';
+
 
 /**
  * Initialise
  */
 
 initCaseIndex();
+initBackToTop();
