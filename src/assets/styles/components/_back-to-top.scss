@@ -1,0 +1,82 @@
+/*------------------------------------*\
+  #BACK-TO-TOP
+\*------------------------------------*/
+
+@use "../settings/variables";
+@use "../tools/functions";
+
+/**
+ * Button that takes the reader back to the top of the page.
+ *
+ * 1. Sticks to the bottom of the viewport while the main content
+ *    scrolls, and rests in place just before the footer at the end.
+ * 2. Hidden (and out of the tab order) until JavaScript shows it.
+ * 3. As wide as its content (24px icon + 8px padding = 40px), so the
+ *    auto margin can push it to the right.
+ * 4. Aligned with the end of the grid on wide screens.
+ * 5. Icon from Phosphor Icons (external dependency). It takes the text
+ *    colour, so states only change the button, never the pseudo-element
+ *    (`:hover::before` would exceed the specificity limit).
+ * 6. Overrides the base link states (`a:visited`, `a:hover`).
+ * 7. Last, so it also wins over the visible-state transition.
+ */
+
+.back-to-top {
+  position: sticky; /* [1] */
+  bottom: variables.$spacing-l;
+  z-index: functions.z("back-to-top");
+  display: flex;
+  visibility: hidden; /* [2] */
+  width: fit-content; /* [3] */
+  padding: variables.$spacing-2xs;
+  margin-right: variables.$spacing-container-inline;
+  margin-bottom: variables.$spacing-l;
+  margin-left: auto;
+  color: variables.$color-button-primary-text-default;
+  background-color: variables.$color-button-primary-background-default;
+  border-radius: variables.$radius-button-primary;
+  opacity: 0; /* [2] */
+  transition:
+    opacity variables.$duration-base variables.$easing-out,
+    visibility 0s variables.$duration-base;
+
+  @media (min-width: variables.$breakpoint-lg) {
+    margin-right: max(
+      variables.$spacing-container-inline,
+      calc((100% - variables.$size-content-max) / 2)
+    ); /* [4] */
+  }
+
+  &::before {
+    width: variables.$size-icon-l;
+    height: variables.$size-icon-l;
+    content: "";
+    background-color: currentcolor; /* [5] */
+    mask-image: url("npm:@phosphor-icons/core/assets/regular/arrow-elbow-right-up.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &:visited {
+    color: variables.$color-button-primary-text-default; /* [6] */
+  }
+
+  &:hover {
+    color: variables.$color-button-primary-text-default; /* [6] */
+    background-color: variables.$color-button-primary-background-hover;
+  }
+
+  &[data-visible="true"] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity variables.$duration-base variables.$easing-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    &[data-visible="true"] {
+      transition: none; /* [7] */
+    }
+  }
+}

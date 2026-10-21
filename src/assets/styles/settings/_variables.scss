@@ -63,7 +63,20 @@ $spacing-4xl: 6rem;       // 96px
 $radius-s: 0.5rem;        // 8px
 
 // Primitives: size
+//$size-icon-xs: 1rem;      // 16px
+$size-icon-s: 1.25rem;    // 20px
+$size-icon-m: 1.5rem;     // 24px
+$size-icon-l: 2rem;       // 32px
+//$size-icon-xl: 2.5rem;    // 36px
+
 $size-content-max: 90rem;
+
+
+
+
+// Primitives: motion
+$duration-base: 220ms;
+$easing-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 /*------------------------------------*\
   #SEMANTICS
@@ -71,6 +84,9 @@ $size-content-max: 90rem;
 
 // Color: background
 $color-background-primary: $color-neutral-0;
+
+// Color: outline
+$color-outline-primary: $color-neutral-200;
 
 // Color: text
 $color-text-primary: $color-neutral-950;
@@ -82,6 +98,14 @@ $color-link-hover: $color-blue-400;
 $color-link-visited: $color-blue-800;
 
 $color-focus: $color-blue-400;
+
+// Color: button
+$color-button-primary-background-default: $color-neutral-100;
+$color-button-primary-background-hover: $color-neutral-200;
+$color-button-primary-background-active: $color-neutral-950;
+
+$color-button-primary-text-default: $color-neutral-950;
+$color-button-primary-text-active: $color-neutral-0;
 
 // Color: tag
 $color-tag-background-default: $color-neutral-100;
@@ -101,7 +125,13 @@ $spacing-paragraph: $spacing-m;
 $spacing-scroll-margin: $spacing-xl;
 
 // Radius
+$radius-button-primary: $radius-s;
 $radius-tag: $radius-s;
+
+
+// Size: buttons: 
+// $size-button-icon-top: $size-icon-l;
+
 
 /*------------------------------------*\
   #Z-INDEX
