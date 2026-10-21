@@ -20,3 +20,16 @@
 
   @return map.get(variables.$z-layers, $layer);
 }
+
+/**
+ * Side space that keeps content within `$size-content-max` and centres
+ * it, with `$spacing-container-inline` as the minimum on small screens.
+ *
+ * Usage: padding-inline: page-gutter();
+ */
+@function page-gutter() {
+  @return max(
+    variables.$spacing-container-inline,
+    calc((100% - variables.$size-content-max) / 2)
+  );
+}
