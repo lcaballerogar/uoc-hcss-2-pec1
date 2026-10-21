@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  #SITE-FOOTER
+\*------------------------------------*/
+
+@use "../settings/variables";
+@use "../tools/functions";
+
+/**
+ * Site footer: copyright, contact, hosting note and social links.
+ *
+ * 1. Info on the left and links on the right; they stack when
+ *    there is no room for both.
+ * 2. Same side space as the rest of the page.
+ * 3. Keeps the plain text and the padded links on the same line.
+ * 4. Removes the base paragraph margin inside the row.
+ * 5. Removes the markers but keeps the list semantics in Safari.
+ * 6. The links' own padding already separates them (12px + 12px).
+ * 7. Text links keep the base underline but stay black in every
+ *    state, so they stand out from the grey text around them.
+ * 8. Room for the hover halo, as in the portfolio navigation.
+ * 9. Invisible copy of the label in the hover weight: the link is
+ *    always as wide as its bold version, so the hover never shifts
+ *    the links next to it.
+ * 10. Always black: overrides the base link states (`a:visited`,
+ *     `a:hover`). The hover only adds the halo and the weight.
+ */
+
+.site-footer {
+  display: flex; /* [1] */
+  flex-wrap: wrap;
+  row-gap: variables.$spacing-2xs;
+  column-gap: variables.$spacing-l;
+  align-items: center;
+  justify-content: space-between;
+  padding: variables.$spacing-l functions.page-gutter(); /* [2] */
+  font-size: variables.$font-size-m;
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-s;
+    align-items: center; /* [3] */
+  }
+
+  &__text {
+    margin-bottom: 0; /* [4] */
+  }
+
+  &__info-link {
+    color: variables.$color-text-primary; /* [7] */
+    text-decoration: none;
+
+    &:visited {
+      color: variables.$color-text-primary; /* [7] */
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: variables.$color-text-primary; /* [7] */
+      text-decoration: underline;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 0; /* [6] */
+    list-style-type: ""; /* [5] */
+  }
+
+  &__link {
+    display: inline-flex; /* [9] */
+    flex-direction: column;
+    align-items: center;
+    padding: variables.$spacing-2xs variables.$spacing-xs; /* [8] */
+    color: variables.$color-text-primary;
+    text-decoration: none;
+    border-radius: variables.$radius-s;
+
+    &::after {
+      visibility: hidden; /* [9] */
+      height: 0;
+      overflow: hidden;
+      font-weight: variables.$font-weight-medium;
+      pointer-events: none;
+      user-select: none;
+      content: attr(data-label);
+    }
+
+    &:visited {
+      color: variables.$color-text-primary; /* [10] */
+    }
+
+    &:hover {
+      font-weight: variables.$font-weight-medium;
+      color: variables.$color-text-primary; /* [10] */
+      background-color: variables.$color-background-secondary;
+    }
+  }
+}

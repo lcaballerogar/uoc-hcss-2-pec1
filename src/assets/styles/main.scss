@@ -18,7 +18,7 @@
  * Variables............Design tokens as Sass variables.
  *
  * TOOLS
- * Functions............Custom Sass functions: z().
+ * Functions............Custom Sass functions: z(), , page-gutter(). 
  *
  * DEPENDENCIES
  * Dependencies.........Third-party styles from npm packages.
@@ -45,6 +45,7 @@
  * Case-meta............Project metadata grid.
  * Case-section.........Eyebrow, title and text of each section.
  * Back-to-top..........Sticky button back to the top of the page.
+ * Site-footer..........Copyright, contact, hosting and social links.
  *
  * UTILITIES
  * Visually-hidden......Hides content visually, keeps it for screen readers. 
@@ -106,6 +107,7 @@
 @use "components/case-meta"; 
 @use "components/case-section"; 
 @use "components/back-to-top";
+@use "components/site-footer"; 
 
 
 

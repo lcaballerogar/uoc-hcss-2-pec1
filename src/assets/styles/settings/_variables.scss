@@ -16,6 +16,7 @@
 
 // Primitives: color
 $color-neutral-0: #fff;
+$color-neutral-50: #f7f7f7;
 $color-neutral-100: #ebebeb;
 $color-neutral-200: #dedede;
 $color-neutral-600: #737373;
@@ -84,6 +85,7 @@ $easing-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 // Color: background
 $color-background-primary: $color-neutral-0;
+$color-background-secondary: $color-neutral-50;
 
 // Color: outline
 $color-outline-primary: $color-neutral-200;
