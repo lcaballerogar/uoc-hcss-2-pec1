@@ -41,10 +41,7 @@
     visibility 0s variables.$duration-base;
 
   @media (min-width: variables.$breakpoint-lg) {
-    margin-right: max(
-      variables.$spacing-container-inline,
-      calc((100% - variables.$size-content-max) / 2)
-    ); /* [4] */
+    margin-right: functions.page-gutter(); /* [4] */
   }
 
   &::before {

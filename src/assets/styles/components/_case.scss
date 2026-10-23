@@ -41,10 +41,7 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       column-gap: variables.$spacing-grid-column;
-      padding-inline: max(
-        variables.$spacing-container-inline,
-        calc((100% - variables.$size-content-max) / 2)
-      ); /* [3] */
+      padding-inline: functions.page-gutter(); /* [3] */
     }
   }
 
