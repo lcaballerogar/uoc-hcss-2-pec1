@@ -1,11 +1,4 @@
 /**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
-
-
-
-/**
  * MAIN
  *
  * Use this file to import partials only. Do not include SCSS code here.
@@ -18,7 +11,7 @@
  * Variables............Design tokens as Sass variables.
  *
  * TOOLS
- * Functions............Custom Sass functions: z(), , page-gutter(). 
+ * Functions............Custom Sass functions: z(), page-gutter().
  *
  * DEPENDENCIES
  * Dependencies.........Third-party styles from npm packages.
@@ -39,7 +32,7 @@
  * COMPONENTS
  * Case.................Case study layout: sticky hero, sidebar and content grid.
  * Skip-link............Keyboard shortcut to the main content.
- * Case-header..........Case study title, claim and tags.
+ * Case-header..........Case study title, client and tags.
  * Case-index...........Section index with current-section marker.
  * Case-overview........Opening summary of the case study.
  * Case-meta............Project metadata grid.
@@ -48,8 +41,11 @@
  * Site-footer..........Copyright, contact, hosting and social links.
  *
  * UTILITIES
- * Visually-hidden......Hides content visually, keeps it for screen readers. 
+ * Visually-hidden......Hides content visually, keeps it for screen readers.
  */
+
+
+
 
 
 /*------------------------------------*\
@@ -59,11 +55,17 @@
 @use "settings/variables";
 
 
+
+
+
 /*------------------------------------*\
   #TOOLS
 \*------------------------------------*/
 
 @use "tools/functions";
+
+
+
 
 
 /*------------------------------------*\
@@ -73,12 +75,18 @@
 @use "dependencies";
 
 
+
+
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
 
-@use "generic/font-face"; 
+@use "generic/font-face";
 @use "generic/reset";
+
+
+
 
 
 /*------------------------------------*\
@@ -91,23 +99,32 @@
 @use "elements/links";
 
 
+
+
+
 /*------------------------------------*\
   #OBJECTS
 \*------------------------------------*/
 
 
+
+
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
 @use "components/case";
-@use "components/skip-link"; 
+@use "components/skip-link";
 @use "components/case-header";
-@use "components/case-index"; 
-@use "components/case-overview"; 
-@use "components/case-meta"; 
-@use "components/case-section"; 
+@use "components/case-index";
+@use "components/case-overview";
+@use "components/case-meta";
+@use "components/case-section";
 @use "components/back-to-top";
-@use "components/site-footer"; 
+@use "components/site-footer";
+
+
 
 
 
@@ -115,4 +132,4 @@
   #UTILITIES
 \*------------------------------------*/
 
-@use "utilities/visually-hidden"; 
+@use "utilities/visually-hidden";
