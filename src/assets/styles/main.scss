@@ -36,7 +36,8 @@
  * Case-index...........Section index with current-section marker.
  * Case-overview........Opening summary of the case study.
  * Case-meta............Project metadata grid.
- * Case-section.........Eyebrow, title and text of each section.
+ * Case-section.........Eyebrow, title, text and media of each section.
+ * Case-figure..........Case study images, full or half width.
  * Back-to-top..........Sticky button back to the top of the page.
  * Site-footer..........Copyright, contact, hosting and social links.
  *
@@ -121,6 +122,7 @@
 @use "components/case-overview";
 @use "components/case-meta";
 @use "components/case-section";
+@use "components/case-figure";
 @use "components/back-to-top";
 @use "components/site-footer";
 

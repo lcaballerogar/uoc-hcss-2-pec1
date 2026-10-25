@@ -5,7 +5,7 @@
 @use "../settings/variables";
 
 /**
- * Each section of the case study: eyebrow, title and body text.
+ * Each section of the case study: eyebrow, title, body text and media.
  * Body paragraphs have no class: they use the base `p` styles.
  *
  * 1. Leaves some room above the section when the index links to it.
@@ -13,6 +13,13 @@
  *    padding already ends the page.
  * 3. The title keeps its base margin; it collapses into this one,
  *    so the gap before the text is 24px.
+ * 4. Exception to single-direction margins: the paragraph before
+ *    the media keeps its base `margin-bottom` (20px) and cannot be
+ *    targeted without a type selector. Both margins collapse, so the
+ *    space before and after the media is 32px, not 52px.
+ * 5. One column on mobile; from `md`, half figures share a row.
+ * 6. Keeps the bottom margin inside the section when the media
+ *    group ends it.
  */
 
 .case-section {
@@ -33,5 +40,19 @@
     font-size: variables.$font-size-xs;
     color: variables.$color-text-tertiary;
     text-transform: uppercase;
+  }
+
+  &__media {
+    display: grid;
+    gap: variables.$spacing-figure-gap;
+    margin-block: variables.$spacing-media-block; /* [4] */
+
+    &:last-child {
+      margin-bottom: 0; /* [6] */
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr); /* [5] */
+    }
   }
 }

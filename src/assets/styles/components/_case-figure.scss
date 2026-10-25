@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  #CASE-FIGURE
+\*------------------------------------*/
+
+@use "../settings/variables";
+
+/**
+ * Image of the case study, placed in the `case-section__media` grid.
+ *
+ * 1. Figures in the same row stretch to its height: the frame and the
+ *    image fill it, so both figures of a pair end at the same line.
+ * 2. Clips the image to the rounded corners.
+ * 3. Crops the image instead of distorting it when the two images of
+ *    a pair do not share the same proportions.
+ * 4. Spans both columns of the media grid.
+ * 5. Takes one column. It is the grid default, but declaring it keeps
+ *    the modifier explicit.
+ */
+
+.case-figure {
+  &--full {
+    grid-column: 1 / -1; /* [4] */
+  }
+
+  &--half {
+    grid-column: span 1; /* [5] */
+  }
+
+  &__frame {
+    display: block;
+    height: 100%; /* [1] */
+    overflow: hidden; /* [2] */
+    border-radius: variables.$radius-figure;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%; /* [1] */
+    object-fit: cover; /* [3] */
+  }
+}

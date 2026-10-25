@@ -124,14 +124,18 @@ $spacing-grid-column: $spacing-s;
 $spacing-heading: $spacing-2xs;
 $spacing-paragraph: $spacing-m;
 
+$spacing-figure-gap: $spacing-m;     // 20px, between figures
+$spacing-media-block: $spacing-xl;   // 32px, around the media group
+
 $spacing-scroll-margin: $spacing-xl;
 
 // Radius
 $radius-button-primary: $radius-s;
 $radius-tag: $radius-s;
+$radius-figure: $radius-s;
 
 
-// Size: buttons: 
+// Size: buttons:
 // $size-button-icon-top: $size-icon-l;
 
 
