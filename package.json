@@ -50,6 +50,6 @@
     "stylelint-scss": "^7.3.0"
   },
   "dependencies": {
-    "@phosphor-icons/core": "^2.1.1"
+    "@phosphor-icons/web": "^2.1.2"
   }
 }

@@ -1,6 +1,6 @@
 {
   "extends": [
-    "stylelint-config-recommended-scss", 
+    "stylelint-config-recommended-scss",
     "stylelint-config-recess-order"
   ],
   "rules": {
@@ -16,9 +16,9 @@
         "resolveNestedSelectors": true,
         "message": "Use BEM naming: block__element--modifier."
       }
-    ], 
+    ],
     "selector-max-specificity": [
-      "0,2,0", { 
+      "0,2,0", {
         "ignoreSelectors": ["/^__/", "/^--/"],
         "message": "Keep specificity low: use a single BEM class instead of combining selectors." }
     ],
@@ -32,8 +32,13 @@
     "declaration-no-important": [
       true,
       { "message": "Avoid !important. Use it only in the utilities layer." }
-    ]
-  }, 
+    ],
+    "font-family-no-missing-generic-family-keyword": [true, {
+    "ignoreFontFamilies": ["Phosphor"],
+    "message": "Add a generic font family as a fallback (e.g. sans-serif). Only the Phosphor icon font is exempt."
+
+    }]
+  },
   "overrides": [
     {
       "files": ["src/assets/styles/elements/**/*.scss"],
@@ -43,7 +48,7 @@
           { "message": "The elements layer only styles bare HTML elements. Move class selectors to objects or components." }
         ]
       }
-    }, 
+    },
     {
       "files": [
         "src/assets/styles/objects/**/*.scss",
@@ -52,7 +57,7 @@
       "rules": {
         "selector-max-type": [0, { "message": "Avoid element selectors. Use a BEM class instead." }]
       }
-    }, 
+    },
     {
       "files": ["src/assets/styles/utilities/**/*.scss"],
       "rules": {

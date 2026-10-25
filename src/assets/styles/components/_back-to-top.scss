@@ -14,11 +14,16 @@
  * 3. As wide as its content (24px icon + 8px padding = 40px), so the
  *    auto margin can push it to the right.
  * 4. Aligned with the end of the grid on wide screens.
- * 5. Icon from Phosphor Icons (external dependency). It takes the text
- *    colour, so states only change the button, never the pseudo-element
+ * 5. Icon from Phosphor Icons (external dependency, imported in
+ *    `_dependencies.scss`). As a font glyph it takes the text colour,
+ *    so states only change the button, never the pseudo-element
  *    (`:hover::before` would exceed the specificity limit).
  * 6. Overrides the base link states (`a:visited`, `a:hover`).
  * 7. Last, so it also wins over the visible-state transition.
+ * 8. `arrow-elbow-right-up` glyph (code from the Phosphor stylesheet).
+ *    The empty alternative text after `/` keeps screen readers from
+ *    announcing the private-use character; the link text is in the
+ *    visually hidden span.
  */
 
 .back-to-top {
@@ -45,14 +50,12 @@
   }
 
   &::before {
-    width: variables.$size-icon-l;
-    height: variables.$size-icon-l;
-    content: "";
-    background-color: currentcolor; /* [5] */
-    mask-image: url("npm:@phosphor-icons/core/assets/regular/arrow-elbow-right-up.svg");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
+    font-family: "Phosphor"; /* [5] */
+    font-size: variables.$size-icon-m;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    content: "\e052" / ""; /* [8] */
   }
 
   &:visited {
