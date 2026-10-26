@@ -8,38 +8,78 @@
 /**
  * Site footer: copyright, contact, hosting note and social links.
  *
- * 1. Info on the left and links on the right; they stack when
- *    there is no room for both.
+ * 1. Mobile first: a centred column in reading order (social links,
+ *    hosting, copyright). From `md`, the links and the hosting note share
+ *    the first line. From `lg`, a single row with the info on the left
+ *    and the links on the right.
  * 2. Same side space as the rest of the page.
  * 3. Keeps the plain text and the padded links on the same line.
  * 4. Removes the base paragraph margin inside the row.
  * 5. Removes the markers but keeps the list semantics in Safari.
  * 6. The links' own padding already separates them (12px + 12px).
- * 7. Text links keep the base underline but stay black in every
- *    state, so they stand out from the grey text around them.
+ * 7. Text links stay black in every state, so they stand out from
+ *    the grey text around them; the underline only appears on hover
+ *    and focus.
  * 8. Room for the hover halo, as in the portfolio navigation.
  * 9. Invisible copy of the label in the hover weight: the link is
  *    always as wide as its bold version, so the hover never shifts
  *    the links next to it.
  * 10. Always black: overrides the base link states (`a:visited`,
  *     `a:hover`). The hover only adds the halo and the weight.
+ * 11. Visual order only from `lg`: the HTML follows the mobile order,
+ *     which is also the keyboard and screen reader order.
+ * 12. Pushes the links to the right edge.
+ * 13. Takes a whole line, so the copyright sits below the links and
+ *     the hosting note on tablets.
  */
 
 .site-footer {
   display: flex; /* [1] */
-  flex-wrap: wrap;
-  row-gap: variables.$spacing-2xs;
-  column-gap: variables.$spacing-l;
+  flex-direction: column;
+  gap: variables.$spacing-2xs;
   align-items: center;
-  justify-content: space-between;
   padding: variables.$spacing-l functions.page-gutter(); /* [2] */
   font-size: variables.$font-size-m;
+  text-align: center;
+
+  @media (min-width: variables.$breakpoint-md) {
+    flex-flow: row wrap;
+    column-gap: variables.$spacing-s;
+    justify-content: center;
+  }
+
+  @media (min-width: variables.$breakpoint-lg) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  &__nav {
+    @media (min-width: variables.$breakpoint-lg) {
+      order: 1; /* [11] */
+      margin-left: auto; /* [12] */
+    }
+  }
+
+  &__hosting {
+    margin-bottom: 0; /* [4] */
+  }
 
   &__info {
     display: flex;
     flex-wrap: wrap;
     gap: variables.$spacing-s;
     align-items: center; /* [3] */
+    justify-content: center;
+
+    @media (min-width: variables.$breakpoint-md) {
+      flex-basis: 100%; /* [13] */
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      flex-basis: auto;
+      order: -1; /* [11] */
+    }
   }
 
   &__text {
