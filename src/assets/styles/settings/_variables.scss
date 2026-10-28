@@ -60,24 +60,26 @@ $spacing-2xl: 3rem;       // 48px
 $spacing-3xl: 4rem;       // 64px
 $spacing-4xl: 6rem;       // 96px
 
+
 // Primitives: radius
 $radius-s: 0.5rem;        // 8px
 
+
 // Primitives: size
-//$size-icon-xs: 1rem;      // 16px
 $size-icon-s: 1.25rem;    // 20px
 $size-icon-m: 1.5rem;     // 24px
 $size-icon-l: 2rem;       // 32px
-//$size-icon-xl: 2.5rem;    // 36px
 
 $size-content-max: 90rem;
-
-
 
 
 // Primitives: motion
 $duration-base: 220ms;
 $easing-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+
+
+
 
 /*------------------------------------*\
   #SEMANTICS
@@ -135,8 +137,7 @@ $radius-tag: $radius-s;
 $radius-figure: $radius-s;
 
 
-// Size: buttons:
-// $size-button-icon-top: $size-icon-l;
+
 
 
 /*------------------------------------*\
@@ -150,6 +151,10 @@ $z-layers: (
   "back-to-top": 10,
   "skip-link": 100,
 );
+
+
+
+
 
 /*------------------------------------*\
   #BREAKPOINTS
